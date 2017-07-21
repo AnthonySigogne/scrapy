@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import scrapy
 
 class BasicSpider(scrapy.Spider):
@@ -12,6 +15,7 @@ class BasicSpider(scrapy.Spider):
 
     def parse(self, response):
         yield {
+            "url": response.url,
             "title": response.css('title::text').extract_first(),
             "description": response.css("meta[name=description]::attr(content)").extract_first()
         }

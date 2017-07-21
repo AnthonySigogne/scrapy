@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"""
+A simple spider made with Scrapy that scraps data from a list of pages.
+"""
+
 import scrapy
 
 class BasicSpider(scrapy.Spider):

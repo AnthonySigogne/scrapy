@@ -1,9 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"""
+A simple spider made with Scrapy that scraps data from a list of pages,
+and saves it in the Elasticsearch database.
+"""
+
 import scrapy
 import elasticsearch
 
+# open elasticsearch connection
 from elasticsearch import Elasticsearch
 es = Elasticsearch(hosts=["localhost"], http_auth=("elastic", "changeme"), port=9200)
 

@@ -1,10 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"""
+A simple crawler made with Scrapy that scraps data from a list of domains,
+and saves it in the Elasticsearch database.
+"""
+
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
 from urllib.parse import urlparse
 
+# open elasticsearch connection
 from elasticsearch import Elasticsearch
 es = Elasticsearch(hosts=["localhost"], http_auth=("elastic", "changeme"), port=9200)
 

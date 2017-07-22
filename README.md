@@ -10,7 +10,7 @@ $ scrapy runspider basicspider.py -a file=list_pages.txt -o data.csv
 
 - inscriptspider.py - A simple spider that scraps data from a list of pages, and launched inside a Python script via CrawlerProcess :  
 ```
-$ scrapy runspider inscriptspider.py url1 url2 url3... urlx
+$ scrapy runspider inscriptspider.py url1 url2 url3 ... urlx
 ```
 
 - basicrawler.py - A simple crawler that scraps data from a list of domains :
